@@ -217,6 +217,7 @@
                                            aria-label="gpa"
                                            id = "gpa"
                                            name="gpa"
+                                           type="number"
                                            value={props.profile.educationalQualifications[idx].gpa}
                                            onChange={handleChange(idx)}
                                         />

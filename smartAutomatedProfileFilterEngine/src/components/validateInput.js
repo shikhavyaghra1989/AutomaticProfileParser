@@ -56,7 +56,7 @@ export default function validateInput(values) {
                             isValid = false
                         }
 
-                        if(item.companyName != null && item.workingCurrently && !item.endDate){
+                        if(item.companyName != null && !item.workingCurrently && !item.endDate){
                             errors.professionalExperiences[idx] = {
                               ...errors.professionalExperiences[idx],
                               endDate: "End date of professional experience is required"
@@ -74,7 +74,7 @@ export default function validateInput(values) {
                             isValid = false
                         }
 
-                        if(item.companyName != null && item.workingCurrently && !item.endDate){
+                        if(item.companyName != null && !item.workingCurrently && !item.endDate){
                                 errors.professionalExperiences[idx] = {
                                   ...errors.professionalExperiences[idx],
                                   endDate: "End date of professional experience is required"
@@ -94,7 +94,7 @@ export default function validateInput(values) {
                         isValid = false
                     }
 
-                    if(item.companyName != null && item.workingCurrently && !item.endDate){
+                    if(item.companyName != null && !item.workingCurrently && !item.endDate){
                         errors.professionalExperiences[idx] = {
                           ...errors.professionalExperiences[idx],
                           endDate: "End date of professional experience is required"
@@ -171,7 +171,7 @@ export default function validateInput(values) {
 
                        if( errors.educationalQualifications.length > 0) {
                            if(errors.educationalQualifications.includes(idx)) {
-                                if(item.degree.trim() && item.tillDate && !item.endDate){
+                                if(item.degree.trim() && !item.tillDate && !item.endDate){
                                     errors.educationalQualifications[idx] = {
                                       ...errors.educationalQualifications[idx],
                                       endDate: "End date of educational qualification is required"
@@ -189,8 +189,7 @@ export default function validateInput(values) {
                                 }
 
 //                                if(item.gpa){
-//                                    var pattern = /^[-+]?[0-9]+\.[0-9]+$/;
-//                                    if(!pattern.test(item.gpa) || !item.gpa<=4){
+//                                    if(!item.gpa<=4){
 //                                        errors.educationalQualifications[idx] = {
 //                                          ...errors.educationalQualifications[idx],
 //                                          gpa: "Please enter a valid GPA less than 4 and numeric"
@@ -200,7 +199,7 @@ export default function validateInput(values) {
 //                                }
                            } else {
                                 errors.educationalQualifications.splice(idx, 0, errorItem);
-                                if(item.degree && item.tillDate && !item.endDate){
+                                if(item.degree && !item.tillDate && !item.endDate){
                                     errors.educationalQualifications[idx] = {
                                       ...errors.educationalQualifications[idx],
                                       endDate: "End date of educational qualification is required"
@@ -216,8 +215,7 @@ export default function validateInput(values) {
                                 }
 
 //                                if(item.gpa){
-//                                    var pattern = /^[-+]?[0-9]+\.[0-9]+$/;
-//                                    if(!pattern.test(item.gpa) || !item.gpa<=4){
+//                                    if(!item.gpa<=4){
 //                                        errors.educationalQualifications[idx] = {
 //                                          ...errors.educationalQualifications[idx],
 //                                          gpa: "Please enter a valid GPA less than 4 and numeric"
@@ -229,7 +227,7 @@ export default function validateInput(values) {
                            }
                        } else {
                             errors.educationalQualifications.push(errorItem);
-                            if(item.degree && item.tillDate && !item.endDate){
+                            if(item.degree && !item.tillDate && !item.endDate){
                                 errors.educationalQualifications[idx] = {
                                   ...errors.educationalQualifications[idx],
                                   endDate: "End date of educational qualification is required"
@@ -246,8 +244,7 @@ export default function validateInput(values) {
                             }
 
 //                            if(item.gpa){
-//                                var pattern = /^[-+]?[0-9]+\.[0-9]+$/;
-//                                if(!pattern.test(item.gpa)){
+//                                if(!item.gpa<=4){
 //                                    errors.educationalQualifications[idx] = {
 //                                      ...errors.educationalQualifications[idx],
 //                                      gpa: "Please enter a valid GPA less than 4 and numeric"
@@ -262,6 +259,5 @@ export default function validateInput(values) {
                     });
             }
 
-//    console.log(JSON.stringify( {errors, isValid}))
     return {errors, isValid}
 }

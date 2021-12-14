@@ -18,7 +18,9 @@ function AddProfile(props) {
                         emailId: '',
                         mobileNumber: '',
                         certifications: [{}],
-                        professionalExperiences: [{}],
+                        professionalExperiences: [{
+                                                    workingCurrently: 0
+                                                 }],
                         educationalQualifications: [{}],
                         applicantSkills: [{
                                             rate: "6",

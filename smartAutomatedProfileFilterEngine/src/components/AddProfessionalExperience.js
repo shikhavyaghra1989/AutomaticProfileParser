@@ -92,19 +92,23 @@
 
           };
           const handleRemoveRow = () => {
-            props.onChange({
-               ...props.profile,
-               professionalExperiences: props.profile.professionalExperiences.slice(0, -1)
-           });
-          };
-          const handleRemoveSpecificRow = (idx) => () => {
-            const professionalExperiences = [...props.profile.professionalExperiences]
-            professionalExperiences.splice(idx, 1)
-            props.onChange({
-                       ...props.profile,
-                       professionalExperiences: professionalExperiences
-                   });
+//               var result = window.confirm("Would you like to delete this row?");
+//               if (result) {
+                   props.onChange({
+                          ...props.profile,
+                          professionalExperiences: props.profile.professionalExperiences.slice(0, -1)
+                      });
+//                }
           }
+
+         const handleRemoveSpecificRow = (idx) => () => {
+             const professionalExperiences = [...props.profile.professionalExperiences]
+             professionalExperiences.splice(idx, 1)
+             props.onChange({
+                ...props.profile,
+                professionalExperiences: professionalExperiences
+             });
+         }
 
         return (
           <div>
