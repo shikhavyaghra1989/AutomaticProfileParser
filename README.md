@@ -23,6 +23,17 @@ Intellij IDEA (IDE) \
 Maven (To run maven command from terminal- optional(Can use IDE like Intellij IDEA otherwise)) \
 Backend URL: [http://localhost:8080](http://localhost:8080/) : Backend API's runs on this endpoint
 
-Steps to set up backend application
-1 - Create schema AutomaticProfileParser in my sql server. Use Dump.Sql file to create schema and table. It also have sample data.
-2 - Import 
+
+#### Steps to set up backend application
+1 - Import the project in Intellij IDEA as `mvn`  project
+2 - Update all the Database properties in application.properties file as :\
+spring.datasource.username=****\
+spring.datasource.password=********\
+spring.datasource.url=jdbc:mysql://localhost:3306/AutomaticProfileParser \
+3 - Change `spring.jpa.hibernate.ddl-auto=update` this property to `create` to create the schema in above Database and set it back to `update` once schema is created.\
+4 - Then do mvn clean and build the application to download the backend dependencies.\
+5 - Run the application.
+
+
+
+
