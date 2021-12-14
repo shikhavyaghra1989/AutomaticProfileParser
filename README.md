@@ -1,5 +1,12 @@
 # Smart Automated Profile Filter Engine
 ## By : Shikha Vyaghra In supervision of Prof. James Abello
+
+### Knowledge required:
+1. React application
+2. Java application setup 
+3. Maven  
+4. Intellij
+
 ## Getting Started with Frontend
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
