@@ -1,4 +1,4 @@
-#Smart Automated Profile Filter Engine
+# Smart Automated Profile Filter Engine
 ## By : Shikha Vyaghra In supervision of Prof. James Abello
 ## Getting Started with Frontend
 
@@ -20,7 +20,7 @@ Tools needed to set up this application.
 Java 11 \
 MySql (Database server in local machine and workbench to read/write data) \
 Intellij IDEA (IDE) \
-Maven (To run maven command from terminal- optional(Can use IDE like Intellij IDEA otherwise))
+Maven (To run maven command from terminal- optional(Can use IDE like Intellij IDEA otherwise)) \
 Backend URL: [http://localhost:8080](http://localhost:8080/) : Backend API's runs on this endpoint
 
 Steps to set up backend application
