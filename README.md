@@ -25,7 +25,7 @@ Backend URL: [http://localhost:8080](http://localhost:8080/) : Backend API's run
 
 
 #### Steps to set up backend application
-1 - Import the project in Intellij IDEA as `mvn`  project
+1 - Import the project in Intellij IDEA as `mvn`  project\
 2 - Update all the Database properties in application.properties file as :\
 spring.datasource.username=****\
 spring.datasource.password=********\
