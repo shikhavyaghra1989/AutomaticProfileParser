@@ -1,0 +1,160 @@
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+.date-picker {
+    margin-bottom: -18px !important;
+    text-align: right;
+}
+.back-color
+{backgroundColor: "#808080"}
+.header-css {
+    position: relative;
+    top: 20px;
+    font-size: 10%;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.heading-size {
+    font-size: 2500%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.top-padding{
+    padding-top: 25px;
+}
+.bottom-padding{
+    padding-top: 25px;
+}
+.right-padding{
+    padding-top: 10px;
+}
+
+.bottom-padding-less{
+    padding-top: 5px;
+}
+
+.float-right  {
+  float: right;
+}
+
+.margin{
+    margin-right:10px;
+}
+
+.margin-top{
+    margin-top:10px;
+}
+
+
+.backgroundLight{
+    background-color: "#DCDCDC";
+}
+
+.background-grey{
+    background-color: "#DFDFDF";
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+dropdown {
+      margin: 1rem;
+      width: 20rem;
+      padding: 1rem .5rem;
+    }
+.downshift-dropdown {
+  margin: 0 auto;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-bottom: none;
+}
+.dropdown-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid whitesmoke;
+  font-size: 1rem;
+  text-align: left;
+}
+.dropdown-button {
+  padding: 0.6rem;
+  border-radius: 3px;
+  background: white;
+  cursor: pointer;
+}
+.popper-div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.popper-item {
+  padding: .5rem;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.color-red{
+  color: red
+}
+
+.div-border {
+    border-style: ridge;
+}
+.para{
+    margin: 0rem;
+}
+
+.para-heading{
+    font-weight: bold;
+}
+
+.btn-link {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+
