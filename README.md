@@ -41,6 +41,23 @@ spring.datasource.url=jdbc:mysql://localhost:3306/AutomaticProfileParser \
 4 - Then do mvn clean and build the application to download the backend dependencies.\
 5 - Run the application.
 
+## Steps to set up backend application using terminal
+1. Install mvn on your machine with java 11.
+2. Create mysql database called "AutomaticProfileParser"    
+3. Update all the Database properties in application.properties file as :
+   spring.datasource.username=****\
+   spring.datasource.password=********\
+   spring.datasource.url=jdbc:mysql://localhost:3306/AutomaticProfileParser 
+4. Change `spring.jpa.hibernate.ddl-auto=update` this property to `create` to create the schema in above Database and set it back to `update` once schema is created.
+5. Go to project root folder "AutomaticProfileParser" mvn clean install to build the project
+6. Once build is success, run application using mvn spring-boot:run command.
+   **Note** Endpoint in following files needs to be changed according to your application server:
+   a. ApiCall.js( PROFILE_SAVING_URL ="http://localhost:8080")
+   b. ApplicantProfileController(@CrossOrigin(origins = "http://localhost:3000"))
+   c. FileController(@CrossOrigin(origins = "http://localhost:3000"))
+   Replace "localhost" with corresponding ip address.
+   
+
 
 
 
