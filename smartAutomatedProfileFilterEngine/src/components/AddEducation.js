@@ -1,15 +1,14 @@
-    import React, { useState } from 'react';
+    import React from 'react';
     import 'bootstrap/dist/css/bootstrap.min.css';
     import InputGroup from 'react-bootstrap/InputGroup';
     import FormControl from 'react-bootstrap/FormControl'
     import FormCheck from 'react-bootstrap/FormCheck'
     import DropdownButton from 'react-bootstrap/DropdownButton'
     import Dropdown from 'react-bootstrap/Dropdown'
-    import Container from 'react-bootstrap/Container'
     import '../css/App.css';
     import { DatePickerComponent } from "@syncfusion/ej2-react-calendars";
 
-    import {Col, Modal, Row, ToggleButtonGroup, ToggleButton, Button} from "react-bootstrap";
+    import {Col, Row, Button} from "react-bootstrap";
 
     function AddEducation(props) {
         let today: Date = new Date();
@@ -30,7 +29,7 @@
           };
 
           const handleChangeCourses = idx => e => {
-              const { name, value } = e.target;
+              const { value } = e.target;
               var nameArr = value.split(',');
               var coursesTakenArray = []
               nameArr.forEach(element =>

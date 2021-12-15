@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {Alert, Navbar, Container, Row, Col} from "react-bootstrap";
 import parserimg from './svgs/parser-svg.svg'
 

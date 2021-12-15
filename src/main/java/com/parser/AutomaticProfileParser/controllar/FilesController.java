@@ -20,7 +20,6 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -34,7 +33,6 @@ public class FilesController {
         this.fileService = fileService;
     }
 
-//    @PostMapping(value="/SaveProfile", produces="application/json", consumes="application/json")
     @PostMapping( consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<UploadResponseMessage> uploadFile(@RequestPart String applicantId,
                                                             @RequestPart MultipartFile file) {

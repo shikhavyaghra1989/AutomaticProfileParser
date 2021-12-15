@@ -8,7 +8,7 @@ class AutomaticProfileParserService{
       async saveUserProfile(profile){
         let result = []
         let request  = { applicant: profile}
-        await api.post(PROFILE_SAVING_URL+"/api/SaveProfile", request)
+        await api.post("/api/SaveProfile", request)
           .then(function (response) {
                 result = Promise.resolve(response.data)
           })
@@ -19,8 +19,8 @@ class AutomaticProfileParserService{
     }
 
     async saveDocs(profile, id){
-        profile.certifications.forEach( (item) =>{
-            let file = item.transcriptFile;
+        profile.certifications.forEach( async function (item) {
+            let file = item.certificationFile;
             const formData = new FormData();
             formData.append('applicantId', id)
             formData.append('file',file)
@@ -29,7 +29,7 @@ class AutomaticProfileParserService{
                     'content-type': 'multipart/form-data',
                 }
             }
-            api.post(PROFILE_SAVING_URL+"/files", formData, config)
+            await api.post("/files", formData, config)
                         .then(function (response) {console.log(response.responseMessage)})
                         .then((result) => {
                             console.log('Success:', result);
@@ -41,8 +41,8 @@ class AutomaticProfileParserService{
         }
       )
 
-      profile.educationalQualifications.forEach( (item) =>{
-          let file = item.certificationFile;
+      profile.educationalQualifications.forEach( async function (item) {
+          let file = item.transcriptFile;
           const formData = new FormData();
           formData.append('applicantId', id)
           formData.append('file',file)
@@ -51,7 +51,7 @@ class AutomaticProfileParserService{
                   'content-type': 'multipart/form-data',
               }
           }
-          api.post(PROFILE_SAVING_URL+"/files", formData, config)
+          await api.post("/files", formData, config)
                       .then(function (response) {console.log(response.responseMessage)})
                       .then((result) => {
                           console.log('Success:', result);

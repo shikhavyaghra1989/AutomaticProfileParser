@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl'
@@ -54,6 +54,7 @@ function AddPersonalInformation(props) {
                                 aria-label="Contact Number"
                                 aria-describedby="mobileNumber"
                                 value={props.value}
+                                type= "mobileNumber"
                                 onChange={handleChange}
                             />
                         </InputGroup>

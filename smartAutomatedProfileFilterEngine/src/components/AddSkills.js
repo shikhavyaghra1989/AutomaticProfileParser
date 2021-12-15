@@ -1,16 +1,13 @@
-    import React, { useState } from 'react';
+    import React from 'react';
     import 'bootstrap/dist/css/bootstrap.min.css';
     import InputGroup from 'react-bootstrap/InputGroup';
     import FormControl from 'react-bootstrap/FormControl'
     import FormCheck from 'react-bootstrap/FormCheck'
-    import Container from 'react-bootstrap/Container'
     import '../css/App.css';
     import RangeSlider from 'react-bootstrap-range-slider';
     import Creatable from 'react-select/creatable';
     import  skills  from './skills.js';
-    import { ActionMeta, OnChangeValue } from 'react-select';
-
-    import {Col, Modal, Row, ToggleButtonGroup, ToggleButton, Button} from "react-bootstrap";
+    import {Col, Row, Button} from "react-bootstrap";
 
     function AddSkills(props) {
         const {skillsOptions} = skills()
@@ -153,7 +150,7 @@
                                     </button>
                                 </Col>
                             </Row>
-                            {props.profile.applicantSkills[idx].rate == 10 && !props.profile.applicantSkills[idx].workedProfessionally &&
+                            {props.profile.applicantSkills[idx].rate === 10 && !props.profile.applicantSkills[idx].workedProfessionally &&
                                 <Row className="bottom-padding-less">
                                     <Col xs={5} md={4}>
                                         <InputGroup >

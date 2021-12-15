@@ -120,7 +120,7 @@ export default function validateInput(values) {
 
                    if( errors.applicantSkills.length > 0) {
                        if(errors.applicantSkills.includes(idx)) {
-                            if(item.takenQuiz && item.quizRating <= 5 && item.rate == 10){
+                            if(item.takenQuiz && item.quizRating <= 5 && item.rate === 10){
                                 errors.applicantSkills[idx] = {
                                   ...errors.applicantSkills[idx],
                                   rate: "Rate 10 is invalid if quiz score is less than 6"
@@ -130,7 +130,7 @@ export default function validateInput(values) {
                        } else {
                             errors.applicantSkills.splice(idx, 0, errorItem);
 
-                            if(item.takenQuiz && item.quizRating <= 5 && item.rate == 10){
+                            if(item.takenQuiz && item.quizRating <= 5 && item.rate === 10){
                                 errors.applicantSkills[idx] = {
                                   ...errors.applicantSkills[idx],
                                   rate: "Rate 10 is invalid if quiz score is less than 6"
@@ -141,7 +141,7 @@ export default function validateInput(values) {
                    } else {
                         errors.applicantSkills.push(errorItem);
 
-                        if(item.takenQuiz && item.quizRating <= 5 && item.rate == 10){
+                        if(item.takenQuiz && item.quizRating <= 5 && item.rate === 10){
                             errors.applicantSkills[idx] = {
                               ...errors.applicantSkills[idx],
                               rate: "Rate 10 is invalid if quiz score is less than 6"

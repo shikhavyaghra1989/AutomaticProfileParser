@@ -1,11 +1,9 @@
-    import React, { useState } from 'react';
+    import React from 'react';
     import 'bootstrap/dist/css/bootstrap.min.css';
     import InputGroup from 'react-bootstrap/InputGroup';
     import FormControl from 'react-bootstrap/FormControl'
-    import Container from 'react-bootstrap/Container'
     import '../css/App.css';
-
-    import {Col, Modal, Row, ToggleButtonGroup, ToggleButton, Button} from "react-bootstrap";
+    import {Col, Row, Button} from "react-bootstrap";
 
     function AddCertification(props) {
 
